@@ -2,6 +2,22 @@ const ACCESS_KEY = "";
 const SECRET_KEY = "";
 
 
+const labels = ['Montréal', 'Canada', 'Collective', 'Table', 'Interior', 'Chair', 'Coffee Shop', 'Coffee Machine', 'Coffee', 'Cafe'];
+
+function populateLabels() {
+    const labelElements = labels.map(label => {
+        return `<button class="label-btn">${label}</button>`;
+    });
+    document.querySelector('.labels-wrap').innerHTML = labelElements.join("");
+    document.querySelectorAll('.label-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const label = event.target.textContent;
+        })
+    })
+}
+
+populateLabels();
+
 document.querySelector('form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
