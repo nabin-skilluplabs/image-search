@@ -1,7 +1,7 @@
-import { ACCESS_KEY } from './constants.js';
+import ACCESS_KEY from './constants.js';
 import { addCookie } from './cookies.js';
 
-export default async function  searchImages(query) {
+export default async function searchImages(query){
     addCookie(query);
     console.log({query});
     const url = `https://api.unsplash.com/search/photos?page=1&query=${query}&client_id=${ACCESS_KEY}`;
