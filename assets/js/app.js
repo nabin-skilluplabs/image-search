@@ -1,6 +1,6 @@
 import searchImages from './search.js';
 import populateLabels from './labels.js';
-import { getCookie } from './cookies.js';
+import { getQuery } from './localstorage.js';
 
 populateLabels();
 
@@ -11,6 +11,8 @@ document.querySelector('form').addEventListener('submit', async function(event) 
 });
 
 (async() => {
-    const query = getCookie();
+    const query = getQuery();
     await searchImages(query);
 })();
+
+Fancybox.bind("[data-fancybox]", {});

@@ -1,4 +1,4 @@
-import searchImages from "./search";
+import searchImages from "./search.js";
 
 const labels = ['Montreal', 'Canada', 'Collective', 'Table', 'Interior', 'Chair', 'Coffee Shop', 'Coffee Machine', 'Coffee', 'Cafe'];
 
